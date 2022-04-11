@@ -1,0 +1,74 @@
+Mete isto nas variaveis globais
+boolean check[][]=new boolean[15][15];
+
+
+//----------------------------------------------
+public void Jogada(int ct,int ct2){
+		String compara="";
+		char [] reset= new char [13];
+		String apanha="";
+		int mudaCor=0;
+		int cL=0;
+		int cC=0;
+		int sobe=0;
+		//----------------------------------------JOGAR-------------------------------------------------------
+
+	   
+                	check[ct][ct2]=!check[ct][ct2];
+//------------------------------------SELECT LETRA---------------------------------------------------------
+                	if(check[ct][ct2]==true){
+                jogo [ct][ct2].setBackground(Color.green);
+                compara+=(jogo[ct][ct2].getText());
+                
+                            for(int ct3=0;ct3<nome_str.length-1;ct3++){
+                            	if(compara.equals(nome_str[ct3])){
+                            		cb[ct3].setSelected(true);	
+                            		cb[ct3].setOpaque(true);
+                            		
+                            		JOptionPane.showMessageDialog(this,"Encotrou o pais!\n"+compara);
+                            		compara="";
+                            	
+       }//FIM DO IF QUE VERIFICA SE A STRING E O PAIS SAO IGUAIS
+  }//FIM DO FOR QUE COMPARA A STRING COM TODOS AS PALAVRAS INSERIDAS
+                            
+                	}//FIM DO CHECK BOOLEAN
+//\-----------------------------SELECT LETRA---------------------------------------------------------                  	
+//-------------------------------DESELECT LETRA-----------------------------------------------------------------------                   	
+else{
+     compara.getChars(0,compara.length()-1, reset, 0);                 		
+     apanha="";
+     jogo [ct][ct2].setBackground(Color.white);
+         for(int ct3=0;ct3<compara.length()-1;ct3++){
+             apanha+=reset[ct3];}
+                	         compara="";
+                	         compara=apanha;}}
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------
+Mete isto no Action Performed
+
+
+
+if(pname.getText()!=""){
+					for(int ct=0;ct<15;ct++){
+						for(int ct2=0;ct2<15;ct2++){
+		                if(e.getSource()==jogo[ct][ct2])
+		                {
+		                Jogada(ct,ct2);	
+		                }}}}}
+
+
+
+
+
+
+
+
+
+
+
+

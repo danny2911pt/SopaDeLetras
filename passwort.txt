@@ -1,0 +1,41 @@
+
+         REMINDER:AINDA TEMOS QUE CRIAR O CHAR[] COM A PASS DO STOR A QUE USAMOS AGORA É "cisco"
+
+
+		//Password
+		
+          public boolean password()
+          {
+			   boolean bol=false;
+			   String apanha="";
+				
+			   char password[]=new char[10];
+				
+			   JPasswordField passwordField = new JPasswordField();
+				
+			   passwordField.setEchoChar('*');
+				
+			   Object[] obj = {"Introduza a Palavra-Passe:\n", passwordField};
+				
+			   Object stringArray[] = {"Entrar","Cancelar"};
+				
+				
+							if (JOptionPane.showOptionDialog(null, obj, "ADMIN",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, stringArray, obj) == JOptionPane.YES_OPTION)
+							    password= passwordField.getPassword();
+			
+				
+				
+					     for(int ct7=0;ct7<password.length;ct7++){
+					     apanha+=password[ct7];
+				              }
+				
+				if(apanha.equals("cisco")){
+					bol=true;
+				}
+				else{
+					JOptionPane.showMessageDialog(null,"Palavra-Passe Incorreta",null,0);
+				}
+				return bol;
+		
+		}
+		//\Password

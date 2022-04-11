@@ -1,0 +1,31 @@
+//Variaveis
+
+static JLabel pname;
+
+//Construtor
+
+//---Player Name--------------//
+
+pname=new JLabel();
+mnb.add(pname);
+
+
+
+//\-----Player Name-----//
+
+
+//---Action Listener---//
+if(e.getSource()==file_mni[0] || e.getSource()==bt[0] ){
+				String player="";
+				pname.setText("");
+				player=JOptionPane.showInputDialog("Introduza o seu nome para começar o jogo");
+				pname.setText(pname.getText()+"Jogador: "+player);
+			}
+
+
+
+
+//\----Action Listener---//
+
+
+
